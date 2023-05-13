@@ -64,7 +64,7 @@ body{
     border-bottom: solid #000 2px;
 }
 
-.boton :hover{
+.boton:hover{
     border-bottom: solid rgb(205, 21, 21) 2px;
 
  }
