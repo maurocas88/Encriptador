@@ -1,16 +1,16 @@
-// Variables
+
+// ************ Variables ************
 let cript=document.querySelector ('#cript');
 let decript=document.querySelector ('#decript');
 let copyCript=document.querySelector ('.copy2');
 let copyDecript=document.querySelector ('.copy1');
-// let encriptado=document.querySelector ('#text2');
 let portapapeles="";
 let cripter=[];
 
 
-// event Listeners
+// ************ Event Listeners ************
 eventListeners();
-// mostrar1();
+
 function eventListeners (){
     cript.addEventListener('click', encriptando);
     decript.addEventListener('click', desencriptando);
@@ -20,8 +20,7 @@ function eventListeners (){
 }
 
 
-
-// Funciones
+// ************ Funciones ************
 function encriptando(e){
     e.preventDefault();
     const textoD = document.querySelector('#decripted');
@@ -29,11 +28,7 @@ function encriptando(e){
     if(validar(textoD)){    // Valida el valor de texto ingresado
         let textoCifrado=cifrar(textoD.value);
         document.querySelector('#cripted').value=textoCifrado;
-
         textoD.value="";
-    }
-    else {
-        alert("false=");
     }
 }
 
@@ -43,17 +38,24 @@ function desencriptando(e){
     if(validar(textoE)){    // Valida el valor de texto ingresado
         let textoDescifrado=decifrar(textoE.value);
         document.querySelector('#decripted').value=textoDescifrado;
-
         textoE.value="";
     }
 }
 
 function copy(e){
     e.preventDefault();
-    const texto=e.target.parentElement.parentElement.children[1].children[0];
+    let elemento=e.target;
+
+    while(!elemento.classList.contains("texto1") && !elemento.classList.contains("texto2")){
+        elemento=elemento.parentElement; //Subimos al elemento padre - hasta estar en el "sector 1" o "sector 2"
+    }  
     
+    const texto=elemento.children[1].children[0]; //luego descendemos hasta el "campoTexto"
+
     if(validar(texto)){    // Valida el valor de texto ingresado
-        alert("true? "+texto.value);
+        navigator.clipboard.writeText(texto.value)
+        texto.select();
+
     }
     else {
         alert("El texto no se pudo copiar");
