@@ -161,18 +161,8 @@ textarea{
     position: relative;
 }
 
-************************Boton Copiar************************
-/* .copiar{
-    width: fit-content;
-    height: fit-content;
-    border-radius: 100%;
-    background: rgba(255, 255, 255, 0);
-    border:none;
-    margin-top: -1000px;
-    box-sizing: border-box;
- 
-}
-*/
+/* ************************Boton Copiar************************ */
+
 .boton:hover{
     border-bottom: solid rgb(0,50,200) 2px;
 
@@ -180,7 +170,6 @@ textarea{
 
 .cp-pantalla:hover{
 
-    /* border-radius: 15%  ; */
     background-color: rgba(230,230,235,0.3);
     border: 2px solid rgb(230,230,235);
 
