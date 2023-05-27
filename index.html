@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/aluraStyle.css">
-    <title>Cripter Challenge</title>
+    <title>Crypter Challenge</title>
 </head>
 
 <header>
-    <H1>Alura Cripter Challenge</H1>
+    <a href="#"class="icon-alura icon">
+    <svg aria-label="alura" aria-hidden="true" focusable="false" role="img" class="icon-alura" width="32" height="48" viewBox="0 0 32 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3958 23.6529C23.3524 23.9311 23.2466 24.1959 23.0863 24.4275C22.926 24.659 22.7154 24.8512 22.4703 24.9898C21.9766 25.3086 21.5447 25.468 21.1077 25.6274C20.177 25.9488 19.1974 26.2702 18.1613 26.643C17.0687 27.0157 16.0891 27.3885 15.215 27.6585C14.1249 28.0313 13.0888 28.3526 12.1041 28.7254C11.3633 29.0425 10.6674 29.4556 10.0345 29.9544C9.44584 30.4877 8.93212 31.0983 8.50734 31.7695C8.07027 32.515 7.79518 33.4766 7.79518 34.5975C7.79518 36.842 8.34022 38.5491 9.43289 39.6161C10.523 40.7396 12.5438 41.2718 15.5389 41.2718C18.5933 41.2718 20.6655 40.6856 21.7607 39.5107C22.8482 38.3357 23.3932 36.6826 23.3932 34.5487V23.6529H23.3958ZM15.5415 0C20.8891 0 24.815 1.01553 27.3217 3.09802C29.831 5.12908 31.0856 7.74119 31.0856 10.8366V37.2148C31.0856 38.2817 30.8696 39.4567 30.4891 40.737C30.1035 42.0225 29.3425 43.1949 28.1418 44.2592C26.9977 45.3313 25.4166 46.2389 23.3984 46.933C21.3802 47.6272 18.7629 48 15.5441 48C12.3304 48 9.70798 47.6272 7.69234 46.933C5.6767 46.2389 4.09298 45.3313 2.9489 44.2592C1.8846 43.3001 1.07834 42.089 0.604178 40.737C0.218532 39.4592 0 38.2843 0 37.2174V33.001C0 30.7565 0.599036 28.674 1.79968 26.8563C3.00032 24.9898 4.68945 23.7095 6.8722 22.9073C7.96229 22.5345 9.21693 22.1618 10.6335 21.681C12.0527 21.1976 13.3588 20.7169 14.6699 20.2927C15.9811 19.8633 17.1252 19.434 18.1048 19.0586C18.6959 18.8221 19.2963 18.6094 19.9044 18.421L20.8866 17.9402C21.2722 17.7268 21.6501 17.4055 22.0332 16.9787C22.4137 16.5545 22.7402 16.0737 23.0153 15.5389C23.306 14.9599 23.4557 14.3203 23.4524 13.6724V11.9627C23.4564 11.3361 23.3249 10.716 23.0667 10.145C22.8508 9.5023 22.4137 8.91612 21.8147 8.38393C21.2156 7.84917 20.3955 7.42239 19.416 7.09845C18.4338 6.78222 17.1278 6.62025 15.6521 6.62025C12.5977 6.62025 10.5795 7.21157 9.48945 8.43535C8.5639 9.50488 8.01885 10.8392 7.91087 12.3329C7.91087 12.6543 7.63835 12.8677 7.30927 12.8677L0.658168 12.9757C0.500177 12.9764 0.348309 12.9146 0.235632 12.8039C0.122956 12.6931 0.0585941 12.5423 0.0565613 12.3844V10.8418C0.0565613 9.3429 0.331655 7.95458 0.930691 6.62025C1.5323 5.28334 2.46042 4.16497 3.71248 3.20086C4.96711 2.24189 6.60482 1.44231 8.56647 0.907552C10.4767 0.26481 12.8214 0 15.5466 0H15.5415Z" fill="#0A3871"/>
+    </svg>
+</a>
+<h1>Alura Crypter Challenge</h1>
 
 </header>
 <body>
@@ -20,23 +25,32 @@
                 <textarea class= "campoTexto" name="desencriptado" id="decripted" cols="30" rows="10" placeholder="Ingrese el Texto.."></textarea>
             </div>
 <!-- ++++++++++++++++++++++++++++++++++++++             -->
-            <div class="btnCopy copy1 hovers">
-                <div class="cp-sup hovers">
-                    <div class="cp-ppal hovers"></div>
+            <div class="btnCopy copy1">
+                <div class="cp-sup">
+                    <div class="cp-ppal"></div>
+                    <div class="cp-pantalla" aria-label="Copiar texto"></div>
                 </div>
                 
-                <div class="cp-inf hovers"></div>
+                <div class="cp-inf"></div>
             </div>
-<!-- ++++++++++++++++++++++++++++++++++++++ -->
+            <!-- <button id="copy3" class="copiar" >
+                <a href="#">
+                    <svg width="30" height="40" stroke="null" viewBox="0 0 900 1000">
+                         <title stroke="null">Layer 1</title>
+                         <path stroke="null" id="svg_1" d="m704,948.00001a128,152.00004 0 0 1 -128,152.00004l-448,0a128,152.00004 0 0 1 -128,-152.00004l0,-532.00014a128,152.00004 0 0 1 128,-152.00004l0,76.00002a64,76.00002 0 0 0 -64,76.00002l0,532.00014a64,76.00002 0 0 0 64,76.00002l448,0a64,76.00002 0 0 0 64,-76.00002l64,0z" fill="#cccccc"/>
+                         <path stroke="null" id="svg_2" d="m324,81.09093a64,81.09093 0 0 0 -64,81.09093l0,567.63652a64,81.09093 0 0 0 64,81.09093l448,0a64,81.09093 0 0 0 64,-81.09093l0,-567.63652a64,81.09093 0 0 0 -64,-81.09093l-448,0zm0,-81.09093l448,0a128,162.18186 0 0 1 128,162.18186l0,567.63652a128,162.18186 0 0 1 -128,162.18186l-448,0a128,162.18186 0 0 1 -128,-162.18186l0,-567.63652a128,162.18186 0 0 1 128,-162.18186z" fill="#cccccc"/>
+                         <path transform="rotate(-3 441.959 -34.0007)" stroke="null" stroke-width="10" d="m445.89926,155.99957c0,-7.60001 0,-19.00003 0,-38.00006c0,-15.20002 383.99624,-45.60007 383.99624,-57.00009c0,-15.20003 0,-30.40005 0,-38.00006c0,-7.60001 0,-26.60004 0,-30.40005c0,-15.20002 123.01883,-19.09816 0,-26.60004c-194.50956,-11.86151 -574.54492,-14.84961 -767.99102,-30.40005c-140.75346,-11.3146 0,-19.00003 0,-38.00006c0,-11.40001 0,-22.80004 0,-38.00006c0,-7.60001 0,-22.80003 0,-30.40004c0,-3.80001 0,-15.20003 0,-19.00003c0,-3.80001 0,-7.60001 0,-11.40003c0,-3.8 0,-7.6 0,-11.40001l0,-3.8l0,-3.80001l0,-3.8" id="svg_4" fill="none"/>
+                       </svg>            
+                </a>
+                </button>
+     -->
+            <!-- ++++++++++++++++++++++++++++++++++++++ -->
             <div>
                 <h6 class="informacion">Solo minúsculas, sin acentos ni caracteres especiales</h6>
             </div>
             <div id="actions2">
-                <button id="cript" class="boton toRigth">Encriptar</button>
+                <button id="cript" class="boton toRigth" aria-label="ver esto">Encriptar</button>
                 <button id="decript" class="boton toLeft">Desencriptar</button>
-                <button id="copy3" class="boton toLeft">
-                    <img src="" alt="" sizes="" srcset="">
-                </button>
             
             </div>
 
@@ -46,12 +60,13 @@
         <div id="sector3" class="texto2">
             <h3>Texto encriptado</h3>
             <div id="tex2">
-                <textarea class= "campoTexto" name="encriptado" id="cripted" cols="20" rows="15 "></textarea>
+                <textarea readonly="true" class= "campoTexto" name="encriptado" id="cripted" cols="20" rows="14º "></textarea>
             </div>
             
             <div class="btnCopy copy2">
                 <div class="cp-sup">
                     <div class="cp-ppal"></div>
+                    <div class="cp-pantalla" aria-label="Copiar texto"></div>
                 </div>
                 
                 <div class="cp-inf"></div>
@@ -63,7 +78,14 @@
 </body>
 
 <footer>
-    <h3>Chamigo Software</h3>
 
+    <h3>Chamigo Software</h3>
+    <a href="https://github.com/maurocas88/" class="icon"><svg aria-label="github" aria-hidden="true" focusable="true" role="img" class="icon-mark-github" viewBox="0 0 16 16" width="25" height="25" fill="#000000" ><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
+    <!-- style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible" -->
+    </a>
+    <a href="https://www.linkedin.com/in/mauro-c%C3%A1serez/" class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="#0a66c2" class="mercado-match" width="25" height="25" focusable="true">
+        <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+      </svg>
+    </a>
 </footer>
 </html>

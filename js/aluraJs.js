@@ -5,6 +5,7 @@ let decript=document.querySelector ('#decript');
 let copyCript=document.querySelector ('.copy2');
 let copyDecript=document.querySelector ('.copy1');
 let portapapeles="";
+let info=document.querySelector ('.informacion');
 let cripter=[];
 
 
@@ -34,10 +35,10 @@ function encriptando(e){
 
 function desencriptando(e){
     e.preventDefault();
-    const textoE = document.querySelector('#cripted');
+    const textoE = document.querySelector('#decripted');
     if(validar(textoE)){    // Valida el valor de texto ingresado
         let textoDescifrado=decifrar(textoE.value);
-        document.querySelector('#decripted').value=textoDescifrado;
+        document.querySelector('#cripted').value=textoDescifrado;
         textoE.value="";
     }
 }
@@ -58,7 +59,7 @@ function copy(e){
 
     }
     else {
-        alert("El texto no se pudo copiar");
+        // alert("El texto no se pudo copiar");
     }
 }
 
@@ -70,7 +71,16 @@ function validar(text){   // Valida el valor del texto ingresado
     }
     
     else if (/[A-Z]/.test(text.value) || (!/[0-9]/.test(text.value) && !/[a-z]/.test(text.value))) {
-        alert("El texto ingresado no es correcto. Es obligatorio, usar minusculas y evitar caracteres especiales");
+        info.style.color='#ff0000';
+        info.style.transform= 'scale(1.2)';
+        info.style.margin='10px 0% 10px 10%';
+
+        // alert("El texto ingresado no es correcto. Es obligatorio, usar minusculas y evitar caracteres especiales");
+        setTimeout (function(){
+            info.style.color=null;
+            info.style.transform= null;
+            info.style.margin=null;
+        },1000);
     } 
     else{    
         return true;
