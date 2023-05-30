@@ -45,7 +45,7 @@ h1{
      
 }
 h3,h6{
-    margin: 10px auto;
+    margin: 15px auto;
 }
 
 #sector3{
@@ -118,7 +118,7 @@ textarea{
     cursor: pointer;
     position: absolute;
     box-sizing: border-box;
-    
+    visibility: hidden;
 }
 
 .cp-ppal{
