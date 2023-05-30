@@ -6,6 +6,7 @@ let copyCript=document.querySelector ('.copy2');
 let copyDecript=document.querySelector ('.copy1');
 let portapapeles="";
 let info=document.querySelector ('.informacion');
+let imagenInicial=document.querySelector ('.imagen_inicial');
 let cripter=[];
 
 
@@ -83,6 +84,7 @@ function validar(text){   // Valida el valor del texto ingresado
         },1000);
     } 
     else{    
+        imagenInicial.style.visibility= 'hidden';
         return true;
     }
 }
