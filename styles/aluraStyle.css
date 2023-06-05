@@ -14,12 +14,7 @@ body{
     justify-content: center;
 
 }
-.icon{
-    margin: 0px 5px;
-text-decoration: none;
-display: inline-block;
 
-}
 header{
     height: 48px;
 display:flex ;
@@ -44,7 +39,7 @@ h1{
     display: inline-block;
      
 }
-h3,h6{
+h3,h5{
     margin: 15px auto;
 }
 
@@ -180,6 +175,32 @@ textarea{
     background-color: rgba(230,230,235,0.3);
     border: 2px solid rgb(230,230,235);
 
+}
+
+.compartir{
+    margin: 20px 10px 50px 5px;
+}
+
+.icon{
+    margin: 0px 3px;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+
+}
+
+footer{
+    margin-top: 15px;
+    background: rgba(200,200,235,0.5);
+    width: 100%;
+    border-radius: 12px;
+
+}
+footer section{
+    align-items: center;
+    margin: 10px auto;
 }
 
 @media screen and (max-width:425px){

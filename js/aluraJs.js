@@ -9,7 +9,7 @@ let info=document.querySelector ('.informacion');
 let imagenInicial=document.querySelector ('.imagen_inicial');
 let btnCopy1=document.querySelector ('.copy1');
 let btnCopy2=document.querySelector ('.copy2');
-
+const compartir=document.getElementById("compartir");
 
 let cripter=[];
 
@@ -22,6 +22,7 @@ function eventListeners (){
     decript.addEventListener('click', desencriptando);
     copyDecript.addEventListener('click', copy);
     copyCript.addEventListener('click', copy);
+    compartir.addEventListener('click', compartiendo);
 
 }
 
@@ -59,9 +60,9 @@ function copy(e){
     const texto=elemento.children[1].children[0]; //luego descendemos hasta el "campoTexto"
 
     if(validar(texto)){    // Valida el valor de texto ingresado
+        portapapeles=texto.value;
         navigator.clipboard.writeText(texto.value)
         texto.select();
-
     }
     else {
         // alert("El texto no se pudo copiar");
@@ -80,7 +81,7 @@ function validar(text){   // Valida el valor del texto ingresado
         info.style.transform= 'scale(1.2)';
         info.style.margin='10px 0% 10px 10%';
 
-        // alert("El texto ingresado no es correcto. Es obligatorio, usar minusculas y evitar caracteres especiales");
+        // Destacamos que es obligatorio, usar minusculas y evitar caracteres especiales y luego se vuelve al estado inicial
         setTimeout (function(){
             info.style.color=null;
             info.style.transform= null;
@@ -110,7 +111,65 @@ function decifrar(tCifrado){
     return desencriptado;
 
 }
-    
+
+function compartiendo(e){
+    e.preventDefault();
+    let click = new Event("click");     //creamos un evento click
+    copyCript.dispatchEvent(click);     //Copiamos el texto encriptado
+
+    if (e.target.classList.contains("shareW1")||e.target.classList.contains("shareW2")){
+        enviarWhatsaap(portapapeles, e);
+    }
+    if (e.target.classList.contains("shareT1")||e.target.classList.contains("shareT2")){
+        enviarTelegram(portapapeles, e);
+    }
+}
+
+function enviarWhatsaap(mensaje, e){
+    if (detectar_movil()=="movil"){
+        window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(mensaje)); //Funcion para enviar mensaje
+
+    }
+    else{
+        window.open("https://web.whatsapp.com/send/?text="+encodeURIComponent(mensaje));
+
+    }
+
+}
+
+function enviarTelegram(mensaje, e){
+    if (detectar_movil()=="movil"){
+        if (e.target.classList.contains("shareT1")){ // movil - mensaje solo
+            window.open("tg:msg_url?url=**mensaje encriptado**:&text="+encodeURIComponent(mensaje));
+
+        }
+        else{ //movil URL y mensaje
+            alert("URL y Mensaje movil")
+            window.open("tg:msg_url?url=https://alura-crypter-challenge.netlify.app/&text="+encodeURIComponent(mensaje));     //Funcion para enviar mensaje
+
+        }
+    }
+    else{ // web mensaje solo
+        if (e.target.classList.contains("shareT1")){
+            window.open("https://telegram.me/share/url?url=**mensaje encriptado**:&text="+encodeURIComponent(mensaje));
+
+        }
+        else{   // WEB URL y mensaje
+            window.open("https://telegram.me/share/url?url=https://alura-crypter-challenge.netlify.app/&text=*mensaje encriptado*:"+encodeURIComponent(mensaje));
+
+        }
+    }
+
+}
+
+function detectar_movil(){
+    let navegador = navigator.userAgent;
+        if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
+            return("movil");
+        } else {
+            return("web");
+        }
+}       
 
     // La letra "a" es convertida para "ai"
     // La letra "e" es convertida para "enter"
