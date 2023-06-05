@@ -127,11 +127,30 @@ function compartiendo(e){
 
 function enviarWhatsaap(mensaje, e){
     if (detectar_movil()=="movil"){
-        window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(mensaje)); //Funcion para enviar mensaje
+        if (e.target.classList.contains("shareW1")){ // movil - mensaje solo
+            window.open("https://api.whatsapp.com/send?text=*mensaje encriptado*:" + encodeURIComponent(mensaje)); //Funcion para enviar mensaje
+
+        }
+        else{ //movil URL y mensaje
+            alert("URL y Mensaje movil")
+            window.open("https://api.whatsapp.com/send?text=https://alura-crypter-challenge.netlify.app/   *mensaje encriptado*:" + encodeURIComponent(mensaje)); //Funcion para enviar mensaje
+
+        }
+
 
     }
     else{
-        window.open("https://web.whatsapp.com/send/?text="+encodeURIComponent(mensaje));
+        if (e.target.classList.contains("shareW1")){
+           window.open("https://web.whatsapp.com/send/?text=*mensaje encriptado*:" + encodeURIComponent(mensaje)); //Funcion para enviar mensaje
+
+        }
+        else{   // WEB URL y mensaje
+            window.open("https://web.whatsapp.com/send/?text=https://alura-crypter-challenge.netlify.app/   *mensaje encriptado*:" + encodeURIComponent(mensaje)); //Funcion para enviar mensaje
+
+        }
+
+
+        // window.open("https://web.whatsapp.com/send/?text="+encodeURIComponent(mensaje));
 
     }
 
