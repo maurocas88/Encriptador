@@ -66,34 +66,44 @@ function copy(e){
     }
     else {
         // alert("El texto no se pudo copiar");
+        info.textContent="El texto no se pudo copiar";
+        destacarInfo();
+
     }
 }
 
 function validar(text){   // Valida el valor del texto ingresado
 
     if(text.value===''){
-        // vacioMsg('No hay contenido para agregar');
-        alert('No hay contenido para agregar');
+        info.textContent="No hay contenido para agregar";
+        destacarInfo();
     }
     
     else if (/[A-Z]/.test(text.value) || (!/[0-9]/.test(text.value) && !/[a-z]/.test(text.value))) {
-        info.style.color='#ff0000';
-        info.style.transform= 'scale(1.2)';
-        info.style.margin='10px 0% 10px 10%';
-
-        // Destacamos que es obligatorio, usar minusculas y evitar caracteres especiales y luego se vuelve al estado inicial
-        setTimeout (function(){
-            info.style.color=null;
-            info.style.transform= null;
-            info.style.margin=null;
-        },1000);
+        destacarInfo();
     } 
     else{
         btnCopy1.style.visibility='visible';
         btnCopy2.style.visibility='visible';
+        compartir.style.visibility='visible';
         imagenInicial.style.visibility= 'hidden';
         return true;
     }
+}
+function destacarInfo(){
+    info.style.color='#ff0000';
+    info.style.transform= 'scale(1.2)';
+    info.style.margin='10px 0% 10px 10%';
+
+    // Destacamos que es obligatorio, usar minusculas y evitar caracteres especiales y luego se vuelve al estado inicial
+    setTimeout (function(){
+        info.style.color=null;
+        info.style.transform= null;
+        info.style.margin=null;
+        info.textContent= 'Solo minúsculas, sin acentos ni caracteres especiales';
+
+    },1500);
+
 }
 
 function cifrar(tDecifrado){
@@ -129,28 +139,19 @@ function enviarWhatsaap(mensaje, e){
     if (detectar_movil()=="movil"){
         if (e.target.classList.contains("shareW1")){ // movil - mensaje solo
             window.open("https://api.whatsapp.com/send?text=*mensaje encriptado*:" + encodeURIComponent(mensaje)); //Funcion para enviar mensaje
-
         }
         else{ //movil URL y mensaje
-            alert("URL y Mensaje movil")
             window.open("https://api.whatsapp.com/send?text=https://alura-crypter-challenge.netlify.app/   *mensaje encriptado*:" + encodeURIComponent(mensaje)); //Funcion para enviar mensaje
-
         }
-
 
     }
     else{
         if (e.target.classList.contains("shareW1")){
            window.open("https://web.whatsapp.com/send/?text=*mensaje encriptado*:" + encodeURIComponent(mensaje)); //Funcion para enviar mensaje
-
         }
         else{   // WEB URL y mensaje
             window.open("https://web.whatsapp.com/send/?text=https://alura-crypter-challenge.netlify.app/   *mensaje encriptado*:" + encodeURIComponent(mensaje)); //Funcion para enviar mensaje
-
         }
-
-
-        // window.open("https://web.whatsapp.com/send/?text="+encodeURIComponent(mensaje));
 
     }
 
@@ -163,7 +164,6 @@ function enviarTelegram(mensaje, e){
 
         }
         else{ //movil URL y mensaje
-            alert("URL y Mensaje movil")
             window.open("tg:msg_url?url=https://alura-crypter-challenge.netlify.app/&text="+encodeURIComponent(mensaje));     //Funcion para enviar mensaje
 
         }

@@ -179,6 +179,8 @@ textarea{
 
 .compartir{
     margin: 20px 10px 50px 5px;
+    visibility: hidden;
+
 }
 
 .icon{
