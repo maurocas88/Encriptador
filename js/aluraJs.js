@@ -4,13 +4,12 @@ let cript=document.querySelector ('#cript');
 let decript=document.querySelector ('#decript');
 let copyCript=document.querySelector ('.copy2');
 let copyDecript=document.querySelector ('.copy1');
-let portapapeles="";
 let info=document.querySelector ('.informacion');
 let imagenInicial=document.querySelector ('.imagen_inicial');
 let btnCopy1=document.querySelector ('.copy1');
 let btnCopy2=document.querySelector ('.copy2');
 const compartir=document.getElementById("compartir");
-
+let portapapeles="";
 let cripter=[];
 
 
