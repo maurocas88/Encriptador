@@ -1,6 +1,5 @@
 
 body{
-    
     background: rgba(240,255,240);
     background: repeating-conic-gradient(
     from 10deg at -100% 50%,
@@ -10,9 +9,7 @@ body{
     rgb(240,240,255) 15deg 20deg,
     rgb(205,220,255) 25deg
   );
-    /* padding: 2%; */
     justify-content: center;
-
 }
 
 header{
@@ -20,11 +17,11 @@ header{
     display:flex ;
     margin: 2% 2% 0 2%;
 }
+
 h1{
     color: #0A3871;
     display: inline-block;
     margin: auto 10px;
-
 }
 
 
@@ -67,7 +64,6 @@ h3,h5{
     padding: 10px;
     margin-left: -31%;
     box-shadow: 2px 2px rgba(200, 200, 200, 0.5);
-
 }
 
 .boton{
@@ -88,7 +84,6 @@ h3,h5{
 }
 .toRigth{
     background-image: linear-gradient(to right, rgba(160,190,200), rgba(200,240,255));
- 
 }
 
 textarea{
@@ -124,20 +119,18 @@ textarea{
     border-radius: 6px;
     background-color:transparent;
     margin: 2.5px auto;
-
 }
+
 .cp-pantalla{
     height: 40.5px;
     width: 40.5px;
     border-radius: 50%;
     position: absolute;
     display: inline-block; 
-    /* background-color: rgba(200,200,200,0.3); */
     background-color:transparent;
     margin: -30px 0 0 -13px;
     border: 1px solid #ccc;
     z-index: 2;
-
 }
 
 .cp-sup{
@@ -149,8 +142,7 @@ textarea{
     margin-left: 10px;
     margin-bottom: 1px;
     background-color:#fff;
-    z-index: 1  ;
-
+    z-index: 1;
 }
 
 .cp-inf{
@@ -168,7 +160,6 @@ textarea{
 
 .boton:hover{
     border-bottom: solid rgb(0,50,200) 2px;
-
  }
 
 .cp-pantalla:hover{
@@ -192,11 +183,11 @@ textarea{
     border-radius: 80%;
     background-color: transparent;
 }
+
 footer .icon:hover{
     background: rgba(200,200,255,0.9);
     border: 2px solid #fff;
     box-sizing: border-box;
-
 }
 
 footer{
@@ -204,8 +195,8 @@ footer{
     width: 100%;
     padding: 6px 2%;
     box-sizing: border-box;
-
 }
+
 footer div{
     border: 4px solid #0A3871;
     background: rgba(200,200,235,0.4);
@@ -221,33 +212,18 @@ footer div h4{
 footer section{
     width: 100%;
     margin: 3px auto;
-    /* box-sizing: border-box; */
-
 }
 
 @media screen and (max-width:425px){
-    /* #sector1{
-        padding: 10px;
-        width: 58%;
-        margin: 10px .5% 10px 2%;
-    }
-    #sector3{
-        padding: 10px;
-        width: 36.1%;
-        margin: 10px 2% 10px .5%;
-    } */
-    
-    
+   
     #sector1{
         width: 96%;
         margin-top: 60px;
         margin: 10px 2% 10px 2%;
-
     }
     #sector3{
         width: 96%;
         margin: 10px 2% 10px 2%;
-
     }
 
     .imagen_inicial{

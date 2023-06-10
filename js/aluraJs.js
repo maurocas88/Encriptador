@@ -64,7 +64,6 @@ function copy(e){
         texto.select();
     }
     else {
-        // alert("El texto no se pudo copiar");
         info.textContent="El texto no se pudo copiar";
         destacarInfo();
 
