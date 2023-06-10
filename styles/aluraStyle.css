@@ -239,11 +239,15 @@ footer section{
     
     
     #sector1{
-        width: 95%;
+        width: 96%;
         margin-top: 60px;
+        margin: 10px 2% 10px 2%;
+
     }
     #sector3{
-        width: 95%;
+        width: 96%;
+        margin: 10px 2% 10px 2%;
+
     }
 
     .imagen_inicial{
