@@ -159,7 +159,7 @@ textarea{
 /* ************************Boton Copiar************************ */
 
 .boton:hover{
-    border-bottom: solid rgb(0,50,200) 2px;
+     border-bottom: solid #0A3871 2px;
  }
 
 .cp-pantalla:hover{
@@ -205,8 +205,65 @@ footer div{
     text-align: center;
 
 }
-footer div h4{
-    margin: 4px auto;
+.brillo{
+    margin: 6px auto;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    height: 18px;
+}
+.brillo:hover{
+    color: #0A3871;
+}
+.brillo span{
+    position:relative;
+    display: block;
+    background: url(https://mmteam.controldedominios.com/files/brillo/brillo.png) no-repeat;
+    background-position:185px 0px;
+    margin-top:-43px;
+    height: 25px;
+    width: 700px;    
+ 
+}
+.brillo:hover span{
+    background-position: 700px 0px;
+    margin-top: 5px;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1.0s;
+    transition-property: all;
+    transition-duration: 1.0s;
+ 
+}
+
+
+
+
+
+.brillo1{
+    overflow: hidden;
+    position: relative;
+    display: block;
+    height: 80px;
+}
+
+.brillo1 .spani{
+    position:relative;
+    display: block;
+    background: url(https://mmteam.controldedominios.com/files/brillo/brillo.png) no-repeat;
+    background-position:-20% 0px;
+    margin-top:-60px;
+    height: 200px;
+    width: 100%;    
+ 
+}
+.brillo1:hover .spani{
+    background-position: 120% 0px;
+    margin-top: -60px;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.5s;
+    transition-property: all;
+    transition-duration: 0.5s;
+ 
 }
 
 footer section{
